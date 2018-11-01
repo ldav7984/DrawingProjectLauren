@@ -54,25 +54,32 @@ public class DrawingView: UIView
         myHouse.lineWidth = 3.0
         
         myHouse.move(to : CGPoint(x: 50, y: 250))
-        myHouse.addLine(to: CGPoint(x: 50, y: 300)) //vertical l ine
+        myHouse.addLine(to: CGPoint(x: 50, y: 300))
+        //house left vertical line
         
         myHouse.move(to: CGPoint(x: 50, y: 250))
-        myHouse.addLine(to: CGPoint(x: 100, y: 250)) //horizontal line
+        myHouse.addLine(to: CGPoint(x: 100, y: 250))
+        //house top horizontal line
         
         myHouse.move(to: CGPoint(x: 100, y: 250))
-        myHouse.addLine(to: CGPoint(x: 100, y: 300)) //verticle line
+        myHouse.addLine(to: CGPoint(x: 100, y: 300))
+        //house right vertical line
         
         myHouse.move(to: CGPoint(x: 50, y: 300))
-        myHouse.addLine(to: CGPoint(x: 100, y: 300)) //horizontal line
+        myHouse.addLine(to: CGPoint(x: 100, y: 300))
+        //house bottom horizontal line
         
         myHouse.move(to: CGPoint(x: 40, y: 250))
         myHouse.addLine(to: CGPoint(x: 110, y: 250))
+        //roof bottom line
         
         myHouse.move(to: CGPoint(x: 75, y: 210))
         myHouse.addLine(to: CGPoint(x: 40, y: 250))
+        //roof left side
         
         myHouse.move(to: CGPoint(x: 75, y: 210))
         myHouse.addLine(to: CGPoint(x: 110, y: 250))
+        //roof right side
         
         return myHouse
         
