@@ -26,7 +26,7 @@
                                     <segue destination="uOA-c0-ZLx" kind="show" id="Si0-YC-gCe"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yub-q5-Tmz">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yub-q5-Tmz" customClass="DrawingView" customModule="DrawingProjectLauren" customModuleProvider="target">
                                 <rect key="frame" x="33" y="43" width="310" height="483"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
