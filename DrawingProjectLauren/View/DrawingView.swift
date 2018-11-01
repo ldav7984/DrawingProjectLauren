@@ -19,7 +19,7 @@ public class DrawingView: UIView
         // Drawing code
         createStickFigure().stroke()
         //drawTurtle()
-        drawRectangle().stroke()
+        drawHouse().stroke()
     }
     
     private func createStickFigure() -> UIBezierPath
@@ -47,27 +47,38 @@ public class DrawingView: UIView
         return figure
     }
     
-    private func drawRectangle() -> UIBezierPath
+    private func drawHouse() -> UIBezierPath
     {
-        let myRectangle : UIBezierPath = UIBezierPath()
+        let myHouse : UIBezierPath = UIBezierPath()
         UIColor.blue.setStroke()
-        myRectangle.lineWidth = 3.0
+        myHouse.lineWidth = 3.0
         
-        myRectangle.move(to : CGPoint(x: 50, y: 250))
-        myRectangle.addLine(to: CGPoint(x: 50, y: 300)) //vertical l ine
+        myHouse.move(to : CGPoint(x: 50, y: 250))
+        myHouse.addLine(to: CGPoint(x: 50, y: 300)) //vertical l ine
         
-        myRectangle.move(to: CGPoint(x: 50, y: 250))
-        myRectangle.addLine(to: CGPoint(x: 100, y: 250)) //horizontal line
+        myHouse.move(to: CGPoint(x: 50, y: 250))
+        myHouse.addLine(to: CGPoint(x: 100, y: 250)) //horizontal line
         
-        myRectangle.move(to: CGPoint(x: 100, y: 250))
-        myRectangle.addLine(to: CGPoint(x: 100, y: 300)) //verticle line
+        myHouse.move(to: CGPoint(x: 100, y: 250))
+        myHouse.addLine(to: CGPoint(x: 100, y: 300)) //verticle line
         
-        myRectangle.move(to: CGPoint(x: 50, y: 300))
-        myRectangle.addLine(to: CGPoint(x: 100, y: 300)) //horizontal line
+        myHouse.move(to: CGPoint(x: 50, y: 300))
+        myHouse.addLine(to: CGPoint(x: 100, y: 300)) //horizontal line
         
-        return myRectangle
+        myHouse.move(to: CGPoint(x: 40, y: 250))
+        myHouse.addLine(to: CGPoint(x: 110, y: 250))
+        
+        myHouse.move(to: CGPoint(x: 75, y: 210))
+        myHouse.addLine(to: CGPoint(x: 40, y: 250))
+        
+        myHouse.move(to: CGPoint(x: 75, y: 210))
+        myHouse.addLine(to: CGPoint(x: 110, y: 250))
+        
+        return myHouse
         
     }
+    
+    
     
     private func drawTurtle() -> Void
     {
