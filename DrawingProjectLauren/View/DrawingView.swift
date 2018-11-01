@@ -18,7 +18,8 @@ public class DrawingView: UIView
      {
         // Drawing code
         createStickFigure().stroke()
-        drawTurtle()
+        //drawTurtle()
+        drawRectangle().stroke()
     }
     
     private func createStickFigure() -> UIBezierPath
@@ -44,6 +45,28 @@ public class DrawingView: UIView
         figure.addLine(to: CGPoint(x: 220, y: 300))
         
         return figure
+    }
+    
+    private func drawRectangle() -> UIBezierPath
+    {
+        let myRectangle : UIBezierPath = UIBezierPath()
+        UIColor.blue.setStroke()
+        myRectangle.lineWidth = 3.0
+        
+        myRectangle.move(to : CGPoint(x: 50, y: 250))
+        myRectangle.addLine(to: CGPoint(x: 50, y: 300)) //vertical l ine
+        
+        myRectangle.move(to: CGPoint(x: 50, y: 250))
+        myRectangle.addLine(to: CGPoint(x: 100, y: 250)) //horizontal line
+        
+        myRectangle.move(to: CGPoint(x: 100, y: 250))
+        myRectangle.addLine(to: CGPoint(x: 100, y: 300)) //verticle line
+        
+        myRectangle.move(to: CGPoint(x: 50, y: 300))
+        myRectangle.addLine(to: CGPoint(x: 100, y: 300)) //horizontal line
+        
+        return myRectangle
+        
     }
     
     private func drawTurtle() -> Void
