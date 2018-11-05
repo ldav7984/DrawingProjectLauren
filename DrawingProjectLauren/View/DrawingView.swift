@@ -16,10 +16,10 @@ public class DrawingView: UIView
     // An empty implementation adversely affects performance during animation.
     public override func draw(_ rect: CGRect) -> Void
      {
-        // Drawing code
         createStickFigure().stroke()
         //drawTurtle()
         drawHouse().stroke()
+        //stroke calls the addLine methods in the function
     }
     
     private func createStickFigure() -> UIBezierPath
@@ -69,16 +69,16 @@ public class DrawingView: UIView
         myHouse.addLine(to: CGPoint(x: 100, y: 300))
         //house bottom horizontal line
         
-        myHouse.move(to: CGPoint(x: 40, y: 250))
-        myHouse.addLine(to: CGPoint(x: 110, y: 250))
+        myHouse.move(to: CGPoint(x: 35, y: 250))
+        myHouse.addLine(to: CGPoint(x: 115, y: 250))
         //roof bottom line
         
-        myHouse.move(to: CGPoint(x: 75, y: 210))
-        myHouse.addLine(to: CGPoint(x: 40, y: 250))
+        myHouse.move(to: CGPoint(x: 75, y: 205))
+        myHouse.addLine(to: CGPoint(x: 35, y: 250))
         //roof left side
         
-        myHouse.move(to: CGPoint(x: 75, y: 210))
-        myHouse.addLine(to: CGPoint(x: 110, y: 250))
+        myHouse.move(to: CGPoint(x: 75, y: 205))
+        myHouse.addLine(to: CGPoint(x: 115, y: 250))
         //roof right side
         
         return myHouse
