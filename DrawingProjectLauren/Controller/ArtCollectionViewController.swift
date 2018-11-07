@@ -91,6 +91,10 @@ public class ArtCollectionViewController: UICollectionViewController
         return cell
     }
     
+   
+
+    // MARK: UICollectionViewDelegate
+    
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: IndexPath) -> CGSize
@@ -101,8 +105,20 @@ public class ArtCollectionViewController: UICollectionViewController
         
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
-
-    // MARK: UICollectionViewDelegate
+    
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView,
+                              layout collectionViewLayout: UICollectionViewLayout,
+                              minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return sectionInsets.left
+    }
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
