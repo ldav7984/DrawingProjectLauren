@@ -26,7 +26,7 @@ public class ArtCollectionViewController: UICollectionViewController
             UIImage(named: "Mimikyu"),
             UIImage(named: "LaurenJavaHaiku"),
             UIImage(named: "LaurenSwiftHaiku"),
-            UIImage(named: "LaurenMainframeHaiku"),
+            UIImage(named: "LaurenMainframeHaiku")
             
         ]
     } ()
@@ -40,7 +40,7 @@ public class ArtCollectionViewController: UICollectionViewController
         "Mimikyu",
         "Java Haiku",
         "Swift Haiku",
-        "Mainframe Haiku",
+        "Mainframe Haiku"
         ]
     } ()
 
