@@ -26,6 +26,7 @@ public class ArtCollectionViewController: UICollectionViewController
             UIImage(named: "Mimikyu"),
             UIImage(named: "LaurenJavaHaiku"),
             UIImage(named: "LaurenSwiftHaiku"),
+            UIImage(named: "ArtAppDrawing"),
             UIImage(named: "LaurenMainframeHaiku")
             
         ]
@@ -40,6 +41,7 @@ public class ArtCollectionViewController: UICollectionViewController
         "Mimikyu",
         "Java Haiku",
         "Swift Haiku",
+        "App Drawing",
         "Mainframe Haiku"
         ]
     } ()
@@ -76,22 +78,27 @@ public class ArtCollectionViewController: UICollectionViewController
     }
 
 
-    public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    public override func collectionView(_ collectionView: UICollectionView,
+                                        numberOfItemsInSection section: Int) -> Int
     {
         //return 0
         return creativeCS.count
     }
-
-    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
+    public override func collectionView(_ collectionView: UICollectionView,
+                                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+                                                         for: indexPath) as! ArtCell
+    
+        artCell.backgroundColor = .purple
+        artCell.artImage.image = creativeCS [indexPath.row]
+        artCell.artLabel.text = labels[indexPath.row]
+        
         // Configure the cell
     
-        return cell
+        return artCell
     }
-    
-   
 
     // MARK: UICollectionViewDelegate
     
