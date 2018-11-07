@@ -12,6 +12,37 @@ private let reuseIdentifier = "artidentifier"
 
 public class ArtCollectionViewController: UICollectionViewController
 {
+    
+    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private let itemsPerRowCompact : CGFloat = 4
+    private let itemsPerRowNormal : CGFloat = 6
+    
+    private let creativeCS : [UIImage?] =
+    {
+        return [
+            UIImage(named: "LaurenDavusOctocat"),
+            UIImage(named: "Frosch"),
+            UIImage(named: "TemmieVillage"),
+            UIImage(named: "Mimikyu"),
+            UIImage(named: "LaurenJavaHaiku"),
+            UIImage(named: "LaurenSwiftHaiku"),
+            UIImage(named: "LaurenMainframeHaiku"),
+            
+        ]
+    } ()
+    
+    private let labels : [String] =
+    {
+        return [
+        "My Octokitty",
+        "Frosch",
+        "Temmie Village",
+        "Mimikyu",
+        "Java Haiku",
+        "Swift Haiku",
+        "Mainframe Haiku",
+        ]
+    } ()
 
     public override func viewDidLoad() -> Void
     {
@@ -39,20 +70,20 @@ public class ArtCollectionViewController: UICollectionViewController
 
     // MARK: UICollectionViewDataSource
 
-    public override func numberOfSections(in collectionView: UICollectionView) -> Int
+    override func numberOfSections(in collectionView: UICollectionView) -> Int
     {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
 
-    public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of items
         return 0
     }
 
-    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
