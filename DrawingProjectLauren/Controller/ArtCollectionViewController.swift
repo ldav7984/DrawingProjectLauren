@@ -92,9 +92,9 @@ public class ArtCollectionViewController: UICollectionViewController
                                                          for: indexPath) as! ArtCell
     
         artCell.backgroundColor = .purple
-        artCell.artImage.image = creativeCS [indexPath.row]
-        artCell.artLabel.text = labels[indexPath.row]
-        
+//        artCell.artImage.image = creativeCS [indexPath.row]
+//        artCell.artLabel.text = labels[indexPath.row]
+//        
         // Configure the cell
     
         return artCell
