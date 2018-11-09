@@ -27,7 +27,8 @@ public class ArtCollectionViewController: UICollectionViewController
             UIImage(named: "LaurenJavaHaiku"),
             UIImage(named: "LaurenSwiftHaiku"),
             UIImage(named: "ArtAppDrawing"),
-            UIImage(named: "LaurenMainframeHaiku")
+            UIImage(named: "LaurenMainframeHaiku"),
+            UIImage(named: "LaurenTechnewsImageRobot")
             
         ]
     } ()
@@ -42,7 +43,8 @@ public class ArtCollectionViewController: UICollectionViewController
         "Java Haiku",
         "Swift Haiku",
         "App Drawing",
-        "Mainframe Haiku"
+        "Mainframe Haiku",
+        "Technews Article Meme"
         ]
     } ()
 
