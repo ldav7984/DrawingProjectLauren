@@ -90,9 +90,8 @@ public class ArtCollectionViewController: UICollectionViewController
     
         artCell.backgroundColor = .purple
         artCell.artImage.image = creativeCS [indexPath.row]
+        //.row is like .get on Java arraylist
         artCell.artLabel.text = labels[indexPath.row]
-        
-        // Configure the cell
     
         return artCell
     }
