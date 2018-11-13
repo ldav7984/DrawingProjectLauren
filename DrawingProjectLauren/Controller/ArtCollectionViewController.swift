@@ -49,6 +49,8 @@ public class ArtCollectionViewController: UICollectionViewController
         ]
     } ()
 
+    //MARK: - Lifecycle
+    
     public override func viewDidLoad() -> Void
     {
         super.viewDidLoad()
@@ -56,31 +58,21 @@ public class ArtCollectionViewController: UICollectionViewController
         // Do any additional setup after loading the view.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-     {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
+    
+    // MARK: - Navigation / Layout
 
     public override func numberOfSections(in collectionView: UICollectionView) -> Int
     {
         return 1
     }
 
-
     public override func collectionView(_ collectionView: UICollectionView,
                                         numberOfItemsInSection section: Int) -> Int
     {
-        //return 0
         return creativeCS.count
     }
+    
+    //MARK : - UICollectionViewDataSource
     
     public override func collectionView(_ collectionView: UICollectionView,
                                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
