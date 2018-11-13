@@ -19,6 +19,7 @@ public class ArtCollectionViewController: UICollectionViewController
     private let itemsPerRowNormal : CGFloat = 6
     
     private let creativeCS : [UIImage?] =
+        //? only returns the UIImage if it is valid
     {
         return [
             UIImage(named: "LaurenDavisOctocat"),
@@ -76,9 +77,10 @@ public class ArtCollectionViewController: UICollectionViewController
     
     public override func collectionView(_ collectionView: UICollectionView,
                                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
+    {       //dequeue means  to remove from the front of the list
         let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                 for: indexPath) as! ArtCell
+        //! force unwraps from one kind to another (force unwraps the reusableCell as an ArtCell custom class)
     
         artCell.backgroundColor = .purple
         artCell.artImage.image = creativeCS [indexPath.row]
@@ -101,12 +103,14 @@ public class ArtCollectionViewController: UICollectionViewController
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
     
+    
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                insetForSectionAt section: Int) -> UIEdgeInsets
     {
         return sectionInsets
     }
+    
     
     public func collectionView(_ collectionView: UICollectionView,
                               layout collectionViewLayout: UICollectionViewLayout,
