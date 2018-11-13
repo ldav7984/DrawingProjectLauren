@@ -10,6 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "artidentifier"
 
+//custom subclass of type UICollectionViewController
 public class ArtCollectionViewController: UICollectionViewController
 {
     
@@ -101,7 +102,7 @@ public class ArtCollectionViewController: UICollectionViewController
         let widthPerItem = availableWidth / itemsPerRowCompact
         
         return CGSize(width: widthPerItem, height: widthPerItem)
-    }
+    } //Adjusts the size of the pictures based on how much room is available.
     
     
     public func collectionView(_ collectionView: UICollectionView,

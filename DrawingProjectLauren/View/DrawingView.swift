@@ -8,6 +8,7 @@
 
 import UIKit
 
+//custom subclass of type UIView
 public class DrawingView: UIView
 {
 
