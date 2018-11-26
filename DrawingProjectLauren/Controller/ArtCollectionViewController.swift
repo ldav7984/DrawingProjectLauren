@@ -74,7 +74,7 @@ public class ArtCollectionViewController: UICollectionViewController
         return creativeCS.count
     }
     
-    //MARK : - UICollectionViewDataSource
+    //MARK: UICollectionViewDataSource
     
     public override func collectionView(_ collectionView: UICollectionView,
                                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
