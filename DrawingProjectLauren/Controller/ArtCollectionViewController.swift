@@ -81,12 +81,13 @@ public class ArtCollectionViewController: UICollectionViewController
     {       //dequeue means  to remove from the front of the list
         let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                 for: indexPath) as! ArtCell
-        //! force unwraps from one kind to another (force unwraps the reusableCell as an ArtCell custom class)
+                                //! force unwraps from one kind to another (force unwraps the reusableCell as an ArtCell custom class)
     
         artCell.backgroundColor = .purple
         artCell.artImage.image = creativeCS [indexPath.row]
         //.row is like .get on Java arraylist
         artCell.artLabel.text = labels[indexPath.row]
+        //assigns the correct text to the label underneath each image
     
         return artCell
     }
@@ -99,7 +100,9 @@ public class ArtCollectionViewController: UICollectionViewController
     {
         let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1)
         let availableWidth = view.frame.width - paddingSpace
+        //calculates how much space is available for the width of the frame
         let widthPerItem = availableWidth / itemsPerRowCompact
+        //designates width each item can be to fit properly
         
         return CGSize(width: widthPerItem, height: widthPerItem)
     } //Adjusts the size of the pictures based on how much room is available.
